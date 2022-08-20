@@ -46,7 +46,7 @@ data = (0.0260,0.0363,0.0136,0.0272,0.0214,0.0338,0.0655,0.1400,0.1843,0.2354,0.
 data_arr = np.array(data)
 reshaped_data_arr = data_arr.reshape(1,-1)
 prediction = logistic_regression.predict(reshaped_data_arr)
-if(prediction=='M'):
+if(prediction[0]=='M'):
     print("Its a Mine")
-elif(prediction=='R'):
+elif(prediction[0]=='R'):
     print("Its a Rock")
